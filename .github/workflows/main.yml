@@ -22,7 +22,14 @@ jobs:
       - name: install pip
         run: |
           python -m pip install --upgrade pip
+          
+      - name: nmos test
+        run: |
+          git clone https://github.com/AMWA-TV/nmos-testing/
+          cd nmos-testing
+          pip install -r requirements.txt
+          python nmos-test.py --help
 
       - name: setup tmate
         uses: mxschmitt/action-tmate@v2
-        if: runner.os == 'macOS'
+        if: runner.os == 'macOS' && false
