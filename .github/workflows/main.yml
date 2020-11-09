@@ -31,6 +31,7 @@ jobs:
         run: |
           git clone https://github.com/AMWA-TV/nmos-testing/
           cd nmos-testing
+          pip install cryptography --upgrade
           pip install -r requirements.txt
           python nmos-test.py --help
 
