@@ -22,7 +22,11 @@ jobs:
       - name: install pip
         run: |
           python -m pip install --upgrade pip
-          
+
+      - name: install conan
+        run: |
+          pip install conan          
+
       - name: nmos test
         run: |
           git clone https://github.com/AMWA-TV/nmos-testing/
